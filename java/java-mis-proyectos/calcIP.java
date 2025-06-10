@@ -1,9 +1,8 @@
 public class calcIP {
 
- 
-    public  static void main(String[] args) {
+    public static void main(String[] args) {
 
-       ipcalc128 ipc = new ipcalc128();
+        ipcalc128 ipc = new ipcalc128();
 
-   }
+    }
 }
