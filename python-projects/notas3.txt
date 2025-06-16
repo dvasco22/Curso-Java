@@ -1,0 +1,655 @@
+bit Locker : 350383-708818-236500-497849-420926-318989-385165-103279
+
+DIFGIFIBRA-PLUS-KTfK
+6ftHYXh6Ru                                
+
+python3.10 -m venv tdf-env
+
+source tdf-env/bin/actívate
+
+======================================
+python -m http.server 8000
+http://localhost:8000/index.html
+======================================                                                                               
+
+pip install --upgrade pip
+//////////////////////////////////////////////////////////////////////////
+convertir
+tensorflowjs_converter --input_format keras numeros.h5 ./
+
+
+tensorflowjs_converter --input_format keras --output_format tfjs_layers_model numeros.h5 ./
+
+tensorflowjs_converter --input_format keras --output_format tfjs_layers_model numeros.keras ./
+
+tensorflowjs_converter \
+  --input_format keras \
+  --output_format tfjs_layers_model \
+  ctof.h5 ./
+
+
+WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. 
+This file format is considered legacy. We recommend using instead the native Keras format, e.g. 
+
+`model.save('my_model.keras')` 
+or 
+`keras.saving.save_model(model, 'my_model.keras')`.
+//////////////////////////////////////////////////////////////////////////
+copiar
+
+cp ~/proyecto/ctof.h5 /mnt/c/Users/dvasco/colab
+
+\\wsl.localhost\Ubuntu-24.04\home\dvasco\pruebasTFJS
+
+//////////////////////////////////////////////////////////////////////////
+
+
+===================================================================================
+pip 24.1.2 from /usr/local/lib/python3.11/dist-packages/pip (python 3.11)  --> colab
+
+(tdf-env) dvasco@DESKTOP-AM4KQ9M:~/pruebasTFJS$ pip --version
+pip 23.0.1 from /home/dvasco/tdf-env/lib/python3.10/site-packages/pip (python 3.10)  --> antees de upgrade
+
+(tdf-env) dvasco@DESKTOP-AM4KQ9M:~/pruebasTFJS$ pip --version
+pip 25.1.1 from /home/dvasco/tdf-env/lib/python3.10/site-packages/pip (python 3.10)  --> despues del upgrade
+===================================================================================
+
+Tensorflow
+Requirement already satisfied: pygments<3.0.0,>=2.13.0 in /usr/local/lib/python3.11/dist-packages (from rich->keras>=3.5.0->tensorflow) (2.19.1)
+Requirement already satisfied: tensorflow in /usr/local/lib/python3.11/dist-packages (2.18.0)
+Requirement already satisfied: absl-py>=1.0.0 in /usr/local/lib/python3.11/dist-packages (from tensorflow) (1.4.0)
+
+pip install tensorflow==2.19.0
+pip install tensorflowjs==4.22.0
+
+(tdf-env) dvasco@DESKTOP-AM4KQ9M:~/pruebasTFJS$ python -m pip show tensorflow  / taoo tensorflowjs
+Name: tensorflow
+Version: 2.19.0
+
+..
+you have packaging 23.2 which is incompatible.
+Successfully installed packaging-23.2 tensorflowjs-4.22.0
+
+
+
+Collecting tensorflowjs
+  Downloading tensorflowjs-4.22.0-py3-none-any.whl.metadata (3.2 kB)
+
+
+
+
+🛠 PASO A PASO PARA INSTALAR WSL2 CON spyder
+wsl --install
+sudo add-apt-repository ppa:deadsnakes/ppa
+sudo apt update
+sudo apt install python3.10 python3.10-venv python3.10-dev -y
+
+Acción	Comando
+Ver distros instaladas		wsl --list --verbose
+Cambiar distro por defecto	wsl --set-default Ubuntu-22.04
+Cambiar versión (WSL1 ↔ WSL2)	wsl --set-version Ubuntu-22.04 2
+Acceder a Ubuntu		wsl o wsl -d Ubuntu-22.04
+
+sudo apt upgrade -y
+
+sudo apt install software-properties-common -y
+sudo add-apt-repository ppa:deadsnakes/ppa -y
+sudo apt update
+
+sudo apt install python3.10 python3.10-venv python3.10-dev -y
+python3.10 --versión --> 3.10.17
+
+sudo apt install python3.11 python3.11-venv python3.11-dev -y
+
+(tdf-env) dvasco@DESKTOP-AM4KQ9M:~$ cat /etc/os-release
+PRETTY_NAME="Ubuntu 24.04.1 LTS"
+NAME="Ubuntu"
+VERSION_ID="24.04"
+VERSION="24.04.1 LTS (Noble Numbat)"
+
+
+
+DESINSTALAR WSL
+wsl --list --verbose
+wsl --unregister <NombreDistribución>
+dism.exe /online /disable-feature /featurename:VirtualMachinePlatform /norestart
+dism.exe /online /disable-feature /featurename:Microsoft-Windows-Subsystem-Linux /norestart
+cd C:\Users\clauj\AppData\Local\Packages
+
+%userprofile%\AppData\Local\Packages  -> borrar ficheros unbuto manualmente ( CanonicalGroupLimited o Ubuntu.)
+
+
+pip uninstall -y tensorflowjs jax flax tensorflow-decision-forests
+rm -rf tdf-env/lib/python3.10/site-packages/tensorflowjs*
+rm -rf tdf-env/lib/python3.10/site-packages/jax*
+rm -rf tdf-env/lib/python3.10/site-packages/flax*
+rm -rf tdf-env/lib/python3.10/site-packages/tensorflow_decision_forests*
+🔧 Paso 1: Instala Python 3.10 (recomendado)
+Descárgalo desde aquí:
+👉 https://www.python.org/downloads/release/python-31013/
+
+pip install spyder-kernels==3.0.*
+
+pip install tensorflow==2.15.0
+
+pip install tensorflow=4.22.0
+Collecting tensorflowjs
+  Downloading tensorflowjs-4.22.0-py3-none-any.whl.metadata (3.2 kB)
+
+
+pip install tensorflow_decision_forests==1.8.1
+
+pip install keras
+pip install tensorflow_datasets
+pip install matplotlib
+
+============================================================================================================
+INSTALANDO PHYTON Y TENSORFLOW
+============================================================================================================
+
+Recomendación de combinación estable:
+Paquete	                Versión
+Python	                3.10.x
+TensorFlow	        2.10
+tensorflowjs    	4.8.0
+Sistema operativo	Windows 11
+
+
+python.exe -m pip install --upgrade pip
+
+pip install  tensorflow 
+
+pip install tensorflowjs
+...Successfully installed packaging-23.2 tensorflowjs-4.22.0
+
+
+pip install --force-reinstall tensorflow  #para evitar errores de tensorflow depues de instalar tensorflowjs
+
+1. import tensorflow as tf
+
+3. print(tf.__version__)
+   2.19.0
+
+4. print(tf.__file__)
+   C:\Users\hola\AppData\Local\Programs\Python\Python311\Lib\site-packages\tensorflow\__init__.py
+
+Crea y activar un entorno virtual
+=================================
+
+modelo.save('modelo_exportado.h5')
+
+Downloading tensorflowjs-4.22.0-py3-none-any.whl.metadata (3.2 kB)
+
+pip install spyder-kernels==3.0.*
+
+dvasco@DESKTOP-AM4KQ9M:~$ sudo apt update
+[sudo] password for dvasco:
+dvasco@DESKTOP-AM4KQ9M:~$ 
+dvasco@DESKTOP-AM4KQ9M:~$ python3.10 --version
+Python 3.10.17
+dvasco@DESKTOP-AM4KQ9M:~$ python3.10 -m venv tfdf-310
+dvasco@DESKTOP-AM4KQ9M:~$ source tfdf-310/bin/activate
+
+
+
+
+
+pip uninstall tensorflow_decision_forests
+pip install tensorflow_decision_forests --upgrade --no-cache-dir
+
+pip install --force-reinstall tensorflow  #para evitar errores de tensorflow depues de instalar tensorflowjs
+
+mkdir carpeta_salida
+
+python -c "import tensorflow.compat.v1 as tf1; print(tf1.__version__)"   -> 2.19.0
+
+pip uninstall tensorflow tensorflow-intel tensorflow-io-gcs-filesystem tensorflow-estimator tf_keras tensorflowjs
+
+tensorflowjs_converter \
+  --input_format=tf_saved_model \
+  --output_format=tfjs_graph_model \
+  path/to/saved_model \
+  path/to/web_model
+
+
+
+Descargar Visual C++ Redistributable (x64)
+Descarga el archivo, instálalo, reinicia tu computadora (por si acaso), y vuelve a probar.
+
+
+SI TENGO ERROR EN WINDOWS
+pip uninstall tensorflow_decision_forests
+pip install tensorflow_decision_forests --upgrade --no-cache-dir
+
+
+============================================================================================================
+colab.resarch.google.com
+============================================================================================================
+
+crear EXE
+
+pyinstaller --onefile --noconsole conversor_temp.py
+=============================
+
+
+
+EXPORTAR A WEB
+==============
+
+============================================================================================================
+Ringa Tech
+==========
+1. Tu primera red neuronal en Python y Tensorflow  OK
+   https://www.youtube.com/watch?v=iX_on3VxZzk
+
+2. Tu primer clasificador de imágenes con Python y Tensorflow OK
+https://www.youtube.com/watch?v=j6eGHROLKP8&t=578s   
+
+
+3. Usa tus modelos de Tensorflow en páginas web | Exportación a Tensorflow.js
+   https://www.youtube.com/watch?v=JpE4bYyRADI&t=1sforce
+
+4. Crea una red neuronal que reconozca tu escritura
+   https://www.youtube.com/watch?v=ZyauOVzjg9Q
+
+
+Crea tu propia red neuronal que puede leer
+https://www.youtube.com/watch?v=aFZEvQDTSyA
+
+Reconocimiento de imágenes con IA - 01 - Convoluciones y filtros
+https://www.youtube.com/watch?v=AwTH_0yW9_I&list=PLZ8REt5zt2PkbANYnDb0InpUjt1qns6qU&index=1
+
+
+Crea una red neuronal que reconozca tu escritura
+https://www.youtube.com/watch?v=ZyauOVzjg9Q
+
+Redes Neuronales Convolucionales - Clasificación avanzada de imágenes con IA / ML (CNN)
+https://www.youtube.com/watch?v=4sWhhQwHqug&t=45s
+
+0.0 Cómo funcionan las redes neuronales - Inteligencia Artificial
+    https://www.youtube.com/watch?v=CU24iC3grq8&t=21s
+
+0.1 Reconocimiento de imágenes con IA - 01 - Convoluciones y filtros
+    https://www.youtube.com/watch?v=AwTH_0yW9_I
+
+
+0.2 Visión artificial desde cero - Convoluciones | Programemos en vivo
+    https://www.youtube.com/watch?v=huPO8RxvuEo&t=1040s
+
+0.3 ¿Cómo optimizamos en 300x los procesos de IA?
+   https://www.youtube.com/watch?v=DcRkEZKU7LQ
+
+0.11 Tu primera red neuronal - Inteligencia Artificial
+  https://www.youtube.com/watch?v=UNFFLJPW7KQ&t=275s
+
+
+
+2.1 Redes Neuronales Convolucionales - Clasificación avanzada de imágenes con IA / ML (CNN)
+    https://www.youtube.com/watch?v=4sWhhQwHqug
+
+3.Usa tus modelos de Tensorflow en páginas web | Exportación a Tensorflow.js
+  https://www.youtube.com/watch?v=JpE4bYyRADI&list=PLZ8REt5zt2Pn0vfJjTAPaDVSACDvnuGiG&index=3
+
+4. Redes Neuronales Convolucionales - Clasificación avanzada de imágenes con IA / ML (CNN)
+   https://www.youtube.com/watch?v=4sWhhQwHqug&list=PLZ8REt5zt2Pn0vfJjTAPaDVSACDvnuGiG&index=4
+
+5. Crea un clasificador de perros y gatos con IA, Python y Tensorflow - Proyecto completo
+   https://www.youtube.com/watch?v=DbwKbsCWPSg&list=PLZ8REt5zt2Pn0vfJjTAPaDVSACDvnuGiG&index=5
+
+6. ¿Pocos datos de entrenamiento? Prueba esta técnica
+   https://www.youtube.com/watch?v=9Dur_oUMGG8&list=PLZ8REt5zt2Pn0vfJjTAPaDVSACDvnuGiG&index=6
+
+7. Las Derivadas Nos Trajeron Al Futuro
+   https://www.youtube.com/watch?v=njoOd9iV2Qo&list=PLZ8REt5zt2Pn0vfJjTAPaDVSACDvnuGiG&index=7
+
+8. Funciones de activación a detalle (Redes neuronales)
+   https://www.youtube.com/watch?v=_0wdproot34
+
+Haz un deepfake en 7 minutos - Inteligencia Artificial
+https://www.youtube.com/watch?v=rM0IDeyD0EA
+
+OTROS
+=====
+BACKPROPAGATION: Cómo Aprende Matemáticamente una Red Neuronal Artificial Paso a Paso con Python
+https://www.youtube.com/watch?v=iOsR-EC9z6I
+
+
+INTELIGENCIA ARTIFICIAL APRENDE A JUGAR DINO (CHROME)
+https://www.youtube.com/watch?v=gC85en0Vmh4&t=506s
+https://github.com/santifiorino/dino-reinforcement-learning/blob/main/main.pde
+
+
+
+
+VERSION COVERSOR DE C a F  CON INTERFACE
+========================================
+import tensorflow as tf
+import numpy as np
+
+# Datos de entrenamiento
+celsius = np.array([-40, -10, 0, 8, 15, 22, 38], dtype=float)
+fahrenheit = np.array([-40, 14, 32, 47, 59, 72, 100], dtype=float)
+
+# Modelo de red neuronal secuencial simple
+#Una sola capa (Dense)
+#Una única neurona (units=1)
+#Una única entrada (input_shape=[1])
+
+modelo = tf.keras.Sequential([
+    tf.keras.layers.Dense(units=1, input_shape=[1])
+])
+
+# Compilar el modelo
+modelo.compile(optimizer=tf.keras.optimizers.Adam(0.1), loss='mean_squared_error')
+
+# Entrenar el modelo
+print("Entrenando el modelo...")
+history = model.fit(celsius, fahrenheit, epochs=1000, verbose=False)
+print("Entrenamiento terminado!")
+
+# Probar el modelo
+#celsius_test = 100.0
+#resultado = modelo.predict([celsius_test])
+print("Hagamos una predicción!")
+resultado = modelo.predict(np.array([100.0]))
+print("El resultado es " + str(resultado) + " fahrenheit!")print(f"\nResultado: {celsius_test}°C son aproximadamente {resultado[0][0]:.2f}°F")
+
+# Mostrar los pesos aprendidos
+weights = modelo.get_weights()
+
+#print("Variables internas del modelo")
+#print(capa.get_weights())
+
+=====================================================================
+=====================================================================
+import matplotlib.pyplot as plt
+plt.xlabel("# Epoca")
+plt.ylabel("Magnitud de pérdida")
+plt.plot(historial.history["loss"])
+
+
+====================================================================
+=====================================================================
+
+#capa = tf.keras.layers.Dense(units=1, input_shape=[1])
+#modelo = tf.keras.Sequential([capa])
+
+oculta1 = tf.keras.layers.Dense(units=3, input_shape=[1])
+oculta2 = tf.keras.layers.Dense(units=3)
+salida  = tf.keras.layers.Dense(units=1)
+modelo = tf.keras.Sequential([oculta1, oculta2, salida])
+
+celsius_test = 100.0
+#resultado = modelo.predict(np.array([100,0]))
+resultado = modelo.predict(np.array([100,0]))
+print(f"\n{celsius_test}°C son aproximadamente {resultado[0][0]:.2f}°F")
+
+# Mostrar los pesos aprendidos
+weights = modelo.get_weights()
+print("\nPesos aprendidos (aproximación de la fórmula):")
+print(f"Multiplicador (pendiente): {weights[0][0][0]:.2f}")
+print(f"Sesgo (bias/intersección): {weights[1][0]:.2f}")
+
+==========================================================================================================
+==========================================================================================================
+==========================================================================================================
+
+Agregá este bloque después del entrenamiento:
+
+
+while True:
+    entrada = input("\nIntroduce una temperatura en °C (o escribe 'salir' para terminar): ")
+    if entrada.lower() == 'salir':
+        print("👋 Hasta luego!")
+        break
+    try:
+        celsius_input = float(entrada)
+        prediccion = model.predict(np.array([celsius_input]))
+        print(f"{celsius_input}°C son aproximadamente {prediccion[0][0]:.2f}°F")
+    except ValueError:
+        print("⚠️ Por favor, introduce un número válido.")
+
+Introduce una temperatura en °C (o escribe 'salir' para terminar): 25
+25.0°C son aproximadamente 77.01°F
+
+Introduce una temperatura en °C (o escribe 'salir' para terminar): 100
+100.0°C son aproximadamente 211.01°F
+
+Introduce una temperatura en °C (o escribe 'salir' para terminar): salir
+👋 Hasta luego!
+
+interfaz con botones e input visual, tipo app de escritorio? O incluso una app web 😄
+=====================================================================================
+
+3. Crear una interfaz visual con botones (usando tkinter)
+
+
+# ========== ENTRENAMIENTO DEL MODELO ==========
+# Datos
+celsius = np.array([-40, -10, 0, 8, 15, 22, 38], dtype=float)
+fahrenheit = np.array([-40, 14, 32, 47, 59, 72, 100], dtype=float)
+
+# Modelo
+model = tf.keras.Sequential([
+    tf.keras.layers.Dense(units=1, input_shape=[1])
+])
+
+model.compile(optimizer=tf.keras.optimizers.Adam(0.1), loss='mean_squared_error')
+model.fit(celsius, fahrenheit, epochs=500, verbose=False)
+
+# ========== INTERFAZ GRÁFICA ==========
+def convertir():
+    try:
+        entrada = float(entrada_celsius.get())
+        resultado = model.predict(np.array([entrada]))
+        salida_fahrenheit.config(text=f"{resultado[0][0]:.2f} °F")
+    except ValueError:
+        salida_fahrenheit.config(text="❌ Entrada no válida")
+
+# Crear ventana
+ventana = tk.Tk()
+ventana.title("Conversor de Temperatura")
+ventana.geometry("300x180")
+ventana.resizable(False, False)
+
+# Widgets
+label_titulo = ttk.Label(ventana, text="Celsius → Fahrenheit", font=("Segoe UI", 14))
+label_titulo.pack(pady=10)
+
+frame = ttk.Frame(ventana)
+frame.pack()
+
+ttk.Label(frame, text="°C: ").grid(row=0, column=0, padx=5, pady=5)
+entrada_celsius = ttk.Entry(frame, width=10)
+entrada_celsius.grid(row=0, column=1, padx=5)
+
+boton_convertir = ttk.Button(ventana, text="Convertir", command=convertir)
+boton_convertir.pack(pady=10)
+
+salida_fahrenheit = ttk.Label(ventana, text="", font=("Segoe UI", 12))
+salida_fahrenheit.pack()
+
+# Iniciar interfaz
+ventana.mainloop()
+
+Verás Una ventana como esta:
+
+╔══════════════════════════╗
+║ Celsius → Fahrenheit     ║
+║                          ║
+║   [   °C input ]         ║
+║                          ║
+║   [ Convertir ]          ║
+║                          ║
+║   Resultado en °F aquí   ║
+╚══════════════════════════╝
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Reconocimiento de Dígitos</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.10.0"></script>
+  <style>
+    canvas {
+      border: 1px solid #fff;
+      background-color: black;
+      cursor: crosshair;
+    }
+    button {
+      margin-top: 10px;
+    }
+    #prediction {
+      font-size: 24px;
+      margin-top: 10px;
+      color: #fff;
+    }
+    body {
+      background: #222;
+      color: #fff;
+      font-family: sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Reconocimiento de Dígitos (MNIST)</h1>
+  <canvas id="canvas" width="280" height="280"></canvas><br>
+  <button onclick="clearCanvas()">Limpiar</button>
+  <button onclick="predict()">Predecir</button>
+  <p id="prediction">Predicción: ...</p>
+
+  <script>
+    const canvas = document.getElementById("canvas");
+    const ctx = canvas.getContext("2d");
+    let isDrawing = false;
+
+    // Preparar canvas con fondo negro
+    ctx.fillStyle = "black";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.lineWidth = 15;
+    ctx.lineCap = "round";
+    ctx.strokeStyle = "white";
+
+    canvas.addEventListener("mousedown", () => isDrawing = true);
+    canvas.addEventListener("mouseup", () => isDrawing = false);
+    canvas.addEventListener("mouseout", () => isDrawing = false);
+    canvas.addEventListener("mousemove", draw);
+
+    function draw(e) {
+      if (!isDrawing) return;
+      const rect = canvas.getBoundingClientRect();
+      ctx.beginPath();
+      ctx.moveTo(e.clientX - rect.left, e.clientY - rect.top);
+      ctx.lineTo(e.clientX - rect.left, e.clientY - rect.top);
+      ctx.stroke();
+    }
+
+    function clearCanvas() {
+      ctx.fillStyle = "black";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      document.getElementById("prediction").textContent = "Predicción: ...";
+    }
+
+    let model;
+
+    async function loadModel() {
+      model = await tf.loadLayersModel("modelo/model.json");
+      console.log("Modelo cargado.");
+    }
+
+    async function predict() {
+      const imgData = ctx.getImageData(0, 0, 280, 280);
+
+      // Convertir a escala de grises, redimensionar, normalizar
+      let tfImg = tf.browser.fromPixels(imgData, 1); // grayscale
+      tfImg = tf.image.resizeBilinear(tfImg, [28, 28]); // redimensionar
+      tfImg = tfImg.toFloat().div(255.0).reshape([1, 28, 28, 1]); // normalizar
+
+      const prediction = model.predict(tfImg);
+      const predIndex = (await prediction.argMax(1).data())[0];
+      document.getElementById("prediction").textContent = `Predicción: ${predIndex}`;
+    }
+
+    loadModel();
+  </script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Verificar carga de modelo TensorFlow.js</title>
+  //<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.16.0/dist/tf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.10.0"></script>
+</head>
+<body>
+  <h2>Verificando carga de modelo...</h2>
+  <script>
+    async function cargarModelo() {
+      try {
+        const modelo = await tf.loadLayersModel('model/model.json');
+        console.log("✅ Modelo cargado correctamente.");
+        console.log(modelo.summary()); // Opcional: muestra resumen del modelo
+      } catch (error) {
+        console.error("❌ Error al cargar el modelo:", error);
+      }
+    }
+
+    cargarModelo();
+  </script>
+</body>
+</html>
+
+Recomendación segura y compatible:
+TensorFlow 2.19.0 (Python 3.10.17, Ubuntu WSL2 24.04)
+
+TensorFlow.js versión 4.16.0 (última versión estable hasta abril-mayo 2025)
+
+¿Por qué usar TensorFlow.js 4.16.0 o similar?
+Compatible con modelos Keras HDF5 (.h5) o SavedModel exportados desde TensorFlow 2.19.
+
+Tiene soporte completo para navegador y Node.js.
+
+Incluye herramientas como tensorflowjs_converter para transformar modelos .h5 o SavedModel al formato web (model.json + pesos binarios).
+
+Instalación recomendada en Python para convertir modelos:
+pip install tensorflowjs==4.16.0
+Esto instalará el conversor compatible con TensorFlow 2.19.0 y te permitirá convertir tu modelo así:
+
+tensorflowjs_converter --input_format keras mi_modelo.h5 carpeta_salida/
+En tu HTML (cliente web), puedes usar:
+
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.16.0/dist/tf.min.js"></script>
+
+
+
+import tensorflow as tf
+
+ruta = ".h5"
+
+try:
+    model = tf.keras.models.load_model(ruta)
+    print("✅ El archivo contiene un modelo completo (estructura + pesos).")
+except Exception as e:
+    print(f"⚠️ No se pudo cargar como modelo completo: {e}")
+    try:
+        dummy_model = tf.keras.Sequential()  # solo para probar la carga de pesos
+        dummy_model.load_weights(ruta)
+        print("✅ El archivo contiene solo los pesos del modelo (weights only).")
+    except Exception as e2:
+        print(f"❌ Tampoco se pudo cargar como pesos: {e2}")
+
+
+
+error: resolution-too-deep
+
+× Dependency resolution exceeded maximum depth
+╰─> Pip cannot resolve the current dependencies as the dependency graph is too complex for pip to solve efficiently.
+
+hint: Try adding lower bounds to constrain your dependencies, for example: 'package>=2.0.0' instead of just 'package'.
+
+Link: https://pip.pypa.io/en/stable/topics/dependency-resolution/#handling-resolution-too-deep-errors
