@@ -41,7 +41,7 @@ public class Calculator {
         Scanner scanner = new Scanner(System.in);
         System.out.println(message);
         int num = scanner.nextInt();
-        // scanner.close();
+        scanner.close();
         return num;
     }
 

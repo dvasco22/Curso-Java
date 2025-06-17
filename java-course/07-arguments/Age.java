@@ -44,8 +44,9 @@ public class Age {
             index = 2;
         } else if (studentAge <= 13) {
             index = 3;
-      //  } else
-      //      index = 4;
+        }
+        // } else
+        // index = 4;
 
         // int index = (studentAge <= 6) ? 0 :
         // (studentAge <= 8) ? 1 :
