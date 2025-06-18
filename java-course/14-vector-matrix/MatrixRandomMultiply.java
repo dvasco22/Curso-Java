@@ -2,7 +2,7 @@
 import java.util.Random;
 import java.util.Scanner;
 
-public class MatrixRandomMultiply {2
+public class MatrixRandomMultiply {
 
     // Genera una matriz de tamaño filas x columnas con valores aleatorios entre 0 y
     // 100
@@ -12,8 +12,8 @@ public class MatrixRandomMultiply {2
 
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
-                // matrix[i][j] = randomize.nextInt(101); // Entre 0 y 100
-                matrix[i][j] = randomize.nextInt(scope + 1) - scope; // [de -scope a +scope]
+                // matrix[i][j] = randomize.nextInt(101); // Entre 0 y 100 inclusive
+                matrix[i][j] = randomize.nextInt(2 * scope) + 1 - (scope); // [de -scope a +scope]
             }
         }
 
@@ -58,7 +58,7 @@ public class MatrixRandomMultiply {2
         int AColumns = keyBoard.nextInt();
         System.out.print("Columnas de B: ");
         int BColumns = keyBoard.nextInt();
-        System.out.print("rango de valores : ");
+        System.out.print("rango de valores : ej. 10 [Toma valores entre -10 y 10] : ");
         int scope = keyBoard.nextInt();
 
         int[][] A = setRandomicMatrix(ARows, AColumns, scope);
