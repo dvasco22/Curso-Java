@@ -106,18 +106,18 @@ print(capa.get_weights())
 #modelo.save('celsius_a_fahrenheit.h5')
 
 
-# 🔷 La tasa de aprendizaje es un valor (por lo general pequeño) que controla el tamaño de los pasos que da el 
+# 🔹 La tasa de aprendizaje es un valor (por lo general pequeño) que controla el tamaño de los pasos que da el 
 # optimizador al ajustar los pesos del modelo durante el entrenamiento.
 #
-# Fórmula simplificada de actualización:
-#     nuevo_peso = peso_actual - tasa_de_aprendizaje × gradiente
+#      Fórmula simplificada de actualización:
+#         nuevo_peso = peso_actual - tasa_de_aprendizaje × gradiente
 #
 # 🔹 Una tasa muy pequeña (p. ej. 0.0001) provoca un prendizaje muy estable y preciso pero puede tomar muchas épocas en converger
 # Puede quedarse atrapado en mínimos locales si no tiene suficiente impulso.
 #
-# 🔹Poe el contrario una tasa muy grande (p. ej. 0.1, 0.5 o más) al principio aprende rápido pero puede saltarse el Mínimo oóptimo
+# 🔹Por el contrario una tasa muy grande (p. ej. 0.1, 0.5 o más) al principio aprende rápido pero puede saltarse el Mínimo óptimo
 #    con riesgo de inestabilidad y las pérdidas oscilan o incluso aumentan.
-# Una tasa media conlleva a pasos controlados acelera el proceso de aprendizaje pero sin saltarte el mínimo.
+# 🔹 Una tasa media conlleva a pasos controlados acelera el proceso de aprendizaje pero sin saltarte el mínimo.
 
 
 

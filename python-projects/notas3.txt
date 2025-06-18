@@ -3,6 +3,12 @@ bit Locker : 350383-708818-236500-497849-420926-318989-385165-103279
 DIFGIFIBRA-PLUS-KTfK
 6ftHYXh6Ru                                
 
+git add .
+git commit -m "Mi nuevo cambio"
+git push origin master
+git push origin master
+
+
 python3.10 -m venv tdf-env
 
 source tdf-env/bin/actívate
