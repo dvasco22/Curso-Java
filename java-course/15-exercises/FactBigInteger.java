@@ -21,9 +21,9 @@ public class FactBigInteger {
         int n;
 
         if (args.length == 0)
-            n = getNbyKeboard(); // input age by keyboard if there isn`t any value from command line
+            n = getNbyKeboard(); // get n from keyboard if there isn`t any value from command line
         else
-            n = Integer.valueOf(args[0]); // take age from command line
+            n = Integer.valueOf(args[0]); // takes n from command line
 
         return n;
     }
@@ -33,8 +33,7 @@ public class FactBigInteger {
         DecimalFormat df = new DecimalFormat(
                 "###,###,###,###,###,###,###,###,###,###,###,###,###,###,###,###,###,###,###,###");
 
-        // int n = 40; // Cambia este número para otro factorial
-        int n = Math.abs(getN(args)); // |n-10|
+        int n = Math.abs(getN(args)); // |n|
         BigInteger factorial = BigInteger.ONE;
 
         for (int i = 2; i <= n; i++) {

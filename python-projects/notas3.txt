@@ -6,7 +6,7 @@ DIFGIFIBRA-PLUS-KTfK
 git add .
 git commit -m "Mi nuevo cambio"
 git push origin master
-git push origin master
+git pull origin master
 
 
 python3.10 -m venv tdf-env

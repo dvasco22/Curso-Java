@@ -1,8 +1,8 @@
 public class MatrixMultiply {
 
     public static int[][] multiplyMatrices(int[][] A, int[][] B) {
-        int ARows = A.length;
-        int AColumns = A[0].length;
+        int rowsA = A.length;
+        int ColsA = A[0].length;
         int BRows = B.length;
         int BColumns = B[0].length;
 

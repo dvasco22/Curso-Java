@@ -6,13 +6,13 @@ public class MatrixRandomMultiply {
 
     // Genera una matriz de tamaño filas x columnas con valores aleatorios entre 0 y
     // 100
-    public static int[][] setRandomicMatrix(int rows, int columns, int scope) {
+    public static int[][] setRandomicMatrix(int rows, int cols, int scope) {
         Random randomize = new Random();
-        int[][] matrix = new int[rows][columns];
+        int[][] matrix = new int[rows][cols];
 
         for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < columns; j++) {
-                // matrix[i][j] = randomize.nextInt(101); // Entre 0 y 100 inclusive
+            for (int j = 0; j < cols; j++) {
+
                 matrix[i][j] = randomize.nextInt(2 * scope) + 1 - (scope); // [de -scope a +scope]
             }
         }
@@ -21,15 +21,15 @@ public class MatrixRandomMultiply {
     }
 
     public static int[][] multiplyMatrices(int[][] A, int[][] B) {
-        int ARows = A.length;
-        int AColumns = A[0].length;
-        int BColumns = B[0].length;
+        int rowsA = A.length;
+        int colsA = A[0].length;
+        int colsB = B[0].length;
 
-        int[][] C = new int[ARows][BColumns];
+        int[][] C = new int[rowsA][colsB];
 
-        for (int i = 0; i < ARows; i++) {
-            for (int j = 0; j < BColumns; j++) {
-                for (int k = 0; k < AColumns; k++) {
+        for (int i = 0; i < rowsA; i++) {
+            for (int j = 0; j < colsB; j++) {
+                for (int k = 0; k < colsA; k++) {
                     C[i][j] += A[i][k] * B[k][j];
                 }
             }
@@ -38,8 +38,8 @@ public class MatrixRandomMultiply {
         return C;
     }
 
-    public static void showMatrix(String name, int[][] matrix) {
-        System.out.println(name + ":");
+    public static void showMatrix(String label, int[][] matrix) {
+        System.out.println(label + ":");
         for (int[] row : matrix) {
             for (int value : row) {
                 System.out.printf("%4d", value);

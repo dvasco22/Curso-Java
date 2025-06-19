@@ -54,9 +54,9 @@ C[][] = | C[1][1] C[1][2] |                             A.B -> C = | 58   64 |
                            k=0
 
 
-             for (int i = 0; i < ARows; i++) {
-                for (int j = 0; j < BCols; j++) {
-                   for (int k = 0; k < ACols; k++) {
+             for (int i = 0; i < RowsA; i++) {
+                for (int j = 0; j < colsB; j++) {
+                   for (int k = 0; k < ColsA; k++) {
                        C[i][j] += A[i][k] * B[k][j];
                    }
                }
