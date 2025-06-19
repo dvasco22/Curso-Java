@@ -23,7 +23,9 @@ public class PrimesList {
     }
 
     private static List<Integer> calculatePrimes(int number) {
-        List<Integer> result = new ArrayList<Integer>();
+        //List<Integer> result = new ArrayList<Integer>();
+        //ArrayList<Integer> result = new ArrayList<>();
+        List<Integer> result = new ArrayList<>();
         for (int i = 1; i < number; i++) {
             if (Primes.isPrime(i)) {
                 result.add(i);
