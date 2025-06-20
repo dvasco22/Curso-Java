@@ -1,4 +1,4 @@
-import java.math.BigInteger;
+import java.math.BigInteger;  //maneja grandes numeros
 import java.text.DecimalFormat;
 
 public class FactBigInteger {
