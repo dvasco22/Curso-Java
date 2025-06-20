@@ -1,7 +1,26 @@
 bit Locker : 350383-708818-236500-497849-420926-318989-385165-103279
 
 DIFGIFIBRA-PLUS-KTfK
-6ftHYXh6Ru                                
+6ftHYXh6Ru      
+
+
+
+1. git Branch -> main
+                master
+
+2. git remote -v
+
+3. si no muestra nada..
+   git remote add origin https://github.com/dvasco22/Curso-Java.git
+
+4. git branch --set-upstream-to=origin/main main     -> main
+   git branch --set-upstream-to=origin/master master -> master
+
+5. git branch --set-upstream-to=origin/master main
+
+6. git pull / git push
+
+
 
 python3.10 -m venv tdf-env
 

@@ -7,7 +7,7 @@ public class FactBigInteger {
         DecimalFormat df = new DecimalFormat(
                 "###,###,###,###,###,###,###,###,###,###,###,###,###,###,###,###,###,###,###,###");
 
-        int n = 150; // Cambia este número para otro factorial
+        int n = 100000; // Cambia este número para otro factorial
 
         BigInteger factorial = BigInteger.ONE;
 
