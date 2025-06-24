@@ -13,7 +13,7 @@ public class MatrixRandomMultiply {
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < cols; j++) {
 
-                matrix[i][j] = randomize.nextInt(2 * scope) + 1 - (scope); // [de -scope a +scope]
+                matrix[i][j] = randomize.nextInt(2 * scope) + 1 - (scope); // [from -scope to +scope]
             }
         }
 
