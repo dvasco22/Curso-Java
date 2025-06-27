@@ -14,8 +14,8 @@ public interface IOrder {
 
     Set<IContainer> getContainers();
 
-    Set<IProduct> getProducts();
-
+    //Set<IProduct> getProducts();
+    Set<IProduct> getCalculateProducts();
     // Lógica de negocio
 
     void addContainer(IContainer container);
