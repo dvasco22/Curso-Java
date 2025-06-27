@@ -16,6 +16,8 @@ public class Person {
     this.age  = age;
     System.out.println("Persona Instanciada ");
     updateCounter();//personCount++;
+
+    
   }
 
   public void greetings() {
