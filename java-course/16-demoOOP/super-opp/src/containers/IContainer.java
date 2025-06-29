@@ -1,35 +1,3 @@
-/*
-package containers;
-
-import java.util.Set;
-
-import enums.ContainerType;
-import products.IProduct;
-
-public interface IContainer {
-
-    // Getters
-
-    String getReference();
-
-    int getVolume();
-
-    int getSurface();
-
-    int getResistance();
-
-    ContainerType getType();
-
-    Set<IProduct> getProducts();
-
-    // Lógica de negocio
-    int volumeDisposable();
-
-    boolean canInsert(IProduct product);
-
-    boolean isResistantTo(IProduct product);
-}
-*/
 
 package containers;
 
@@ -42,23 +10,26 @@ public interface IContainer {
 
     // Getters
 
-    String getReference();
+    String getReference(); // ok
 
     // int getResistance();
     ContainerType getType();
+    // no es necesario implemetar getType en la clase container
+    // ya que es abstracta, pero si se debe implenetar en todas
+    // las clases hijas
 
-    Set<IProduct> getProducts();
+    Set<IProduct> getProducts(); // ok
 
     // Propiedades calculadas
 
     int calculateSurface();
 
-    int calculateVolume();
+    int calculateVolume(); // ok
 
     // Lógica de negocio
-    int volumeDisposable();
+    int volumeDisposable(); // ok
 
-    boolean canInsert(IProduct product);
+    boolean canInsert(IProduct product); // ok
 
-    boolean isResistantTo(IProduct product);
+    boolean isResistantTo(IProduct product); // ok
 }
