@@ -10,7 +10,7 @@ public interface IContainer {
 
     // Getters
 
-    String getReference(); // ok
+    String getReference();
 
     // int getResistance();
     ContainerType getType();
@@ -18,18 +18,18 @@ public interface IContainer {
     // ya que es abstracta, pero si se debe implenetar en todas
     // las clases hijas
 
-    Set<IProduct> getProducts(); // ok
+    Set<IProduct> getProducts();
 
     // Propiedades calculadas
 
     int calculateSurface();
 
-    int calculateVolume(); // ok
+    int calculateVolume();
 
     // Lógica de negocio
-    int volumeDisposable(); // ok
+    int volumeAvailable();
 
-    boolean canInsert(IProduct product); // ok
+    boolean canInsert(IProduct product);
 
-    boolean isResistantTo(IProduct product); // ok
+    boolean isResistantTo(IProduct product);
 }

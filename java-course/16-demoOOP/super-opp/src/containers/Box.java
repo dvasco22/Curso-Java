@@ -2,7 +2,6 @@
 package containers;
 
 import enums.ContainerType;
-import products.IProduct;
 
 public class Box extends Container {
 
@@ -26,8 +25,4 @@ public class Box extends Container {
         return length * width;
     }
 
-    @Override
-    public boolean isResistantTo(IProduct product) {
-        return true;
-    }
 }
