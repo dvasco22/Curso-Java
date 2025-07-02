@@ -22,7 +22,7 @@ public class Bag extends Container {
     }
 
     // d=2*r
-    // L=2pi*r por def
+    // L=2*pi*r por definicion de perímetro
     // L=pi*d -> d=L/pi
     private int calculateDiameter() {
         return (int) ((2 * length) / Math.PI);
