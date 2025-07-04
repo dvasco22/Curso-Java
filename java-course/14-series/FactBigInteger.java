@@ -1,6 +1,7 @@
 import java.math.BigInteger;  //maneja grandes numeros
 import java.text.DecimalFormat;
 
+
 public class FactBigInteger {
     public static void main(String[] args) {
 
@@ -19,3 +20,17 @@ public class FactBigInteger {
     }
 
 }
+
+
+/*
+ * resultado = math.factorial(100)
+resultado_str = f"{resultado:,}".replace(",", " ")
+print(resultado_str)
+ */
+
+/*
+ import math
+
+resultado = math.factorial(100)
+print(f"{resultado:.5e}")  # 5 dígitos significativos en notación científica
+ */
