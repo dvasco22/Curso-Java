@@ -6,6 +6,46 @@
     "configurations": [
         {
             "type": "java",
+            "name": "MatrixRandomMultiply",
+            "request": "launch",
+            "mainClass": "MatrixRandomMultiply"
+        },
+        {
+            "type": "java",
+            "name": "SaveUser",
+            "request": "launch",
+            "mainClass": "com.cdsb.files.exercises.SaveUser",
+            "projectName": "demos-persis"
+        },
+        {
+            "type": "java",
+            "name": "FileSystem2",
+            "request": "launch",
+            "mainClass": "com.cdsb.files.FileSystem2",
+            "projectName": "demos-persis"
+        },
+        {
+            "type": "java",
+            "name": "FileSystem1",
+            "request": "launch",
+            "mainClass": "com.cdsb.files.FileSystem1",
+            "projectName": "demos-persis"
+        },
+        {
+            "type": "java",
+            "name": "FileSystem1",
+            "request": "launch",
+            "mainClass": "FileSystem1",
+            "projectName": "demos-concepts"
+        },
+        {
+            "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "com.cdsb.App"
+        },
+        {
+            "type": "java",
             "name": "CardsApp",
             "request": "launch",
             "mainClass": "local.collections.exercises.Ex05_Cards.CardsApp",
