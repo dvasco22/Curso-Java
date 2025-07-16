@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CatalogoConArchivo",
+            "request": "launch",
+            "mainClass": "local.collections.CatalogoConArchivo",
+            "projectName": "demo_vc"
+        },
+        {
+            "type": "java",
+            "name": "CatalogoInteractivo",
+            "request": "launch",
+            "mainClass": "local.collections.CatalogoInteractivo",
+            "projectName": "demo_vc"
+        },
+        {
+            "type": "java",
+            "name": "CatalogoInteractivo",
+            "request": "launch",
+            "mainClass": "local.collections.catalogo.CatalogoInteractivo",
+            "projectName": "demo_vc"
+        },
+        {
+            "type": "java",
             "name": "MatrixRandomMultiply",
             "request": "launch",
             "mainClass": "MatrixRandomMultiply"
