@@ -39,13 +39,13 @@ public class MatrixMultiply {
     public static void main(String[] args) {
         int[][] A = {
                 { 1, 2, 3 },
-                { 4, 5, 6 }
+                { 4, 5, 6 } // 3x2
         };
 
         int[][] B = {
                 { 7, 8 },
                 { 9, 10 },
-                { 11, 12 }
+                { 11, 12 } // 2x3
         };
 
         int[][] C = multiplyMatrices(A, B);

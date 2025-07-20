@@ -13,7 +13,7 @@ public class MatrixRandomMultiply {
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < cols; j++) {
 
-                matrix[i][j] = randomize.nextInt(2 * scope) + 1 - (scope); // [from -scope to +scope]
+                    matrix[i][j] = randomize.nextInt(2 * scope + 1) - (scope); // [from -scope to +scope]
             }
         }
 
@@ -39,30 +39,32 @@ public class MatrixRandomMultiply {
     }
 
     public static void showMatrix(String label, int[][] matrix) {
-        System.out.println(label + ":");
+        System.out.println("\n" + label + " :");
         for (int[] row : matrix) {
+            System.out.print("|");
             for (int value : row) {
                 System.out.printf("%4d", value);
             }
-            System.out.println();
+            System.out.println("   |");
         }
-        System.out.println();
+        // System.out.println(" %d x %d", row, col);
+        // System.out.println();
     }
 
     public static void main(String[] args) {
         Scanner keyBoard = new Scanner(System.in);
 
         System.out.print("Filas de A: ");
-        int ARows = keyBoard.nextInt();
+        int rowsA = keyBoard.nextInt();
         System.out.print("Columnas de A (y filas de B): ");
-        int AColumns = keyBoard.nextInt();
+        int colsA = keyBoard.nextInt();
         System.out.print("Columnas de B: ");
-        int BColumns = keyBoard.nextInt();
+        int colsB = keyBoard.nextInt();
         System.out.print("rango de valores : ej. 10 [Toma valores entre -10 y 10] : ");
         int scope = keyBoard.nextInt();
 
-        int[][] A = setRandomicMatrix(ARows, AColumns, scope);
-        int[][] B = setRandomicMatrix(AColumns, BColumns, scope);
+        int[][] A = setRandomicMatrix(rowsA, colsA, scope);
+        int[][] B = setRandomicMatrix(colsA, colsB, scope);
         int[][] C = multiplyMatrices(A, B);
 
         showMatrix("Matriz A", A);

@@ -10,59 +10,68 @@ public abstract class Container implements IContainer {
     protected int resistance;
     protected int height;
 
-    private Set<IProduct> products; // est datos
+    private Set<IProduct> products;
 
-    public Container(String reference) { // const.
+    public Container(String reference) {
         this.reference = reference;
     }
 
     @Override
-    public String getReference() { // ok
+    public String getReference() {
         return reference;
     }
 
     @Override
-    public Set<IProduct> getProducts() { // ok
+    public Set<IProduct> getProducts() {
         return products;
     }
 
     @Override
-    public int calculateVolume() { // ok
+    public int calculateVolume() {
         return calculateSurface() * height;
     }
 
     @Override
-    public boolean canInsert(IProduct product) { // ok
-        // TODO Auto-generated method stub
-        return false;
-    }
+    public boolean canInsert(IProduct product) {
 
-    /*
-     * @Override
-     * public boolean isResistantTo(IProduct product) { // ok
-     * // TODO Auto-generated method stub
-     * // resistance
-     * return false;
-     * }
-     */
+        // Es resistente
+        if (!this.isResistantTo(product)) {
+            return false;
+        }
+
+        // Tiene espacio
+        if (!product.hasSpace(this)) {
+            return false;
+        }
+
+        // Los productos son compatibles
+
+        for (IProduct element : products) {
+            if (!product.isCompatible(element)) {
+                return false;
+            }
+        }
+        return true;
+    }
 
     @Override
-    public int volumeDisposable() { // ok
-
-        // TODO Auto-generated method stub
-        return 0;
+    public boolean isResistantTo(IProduct product) {
+        return true;
     }
 
-    /*
-     * Override la clase toString de OBJECT
-     * la cual esta definida asi ;
-     * public String toString() {
-     * return getClass().getName() + "@" + Integer.toHexString(hashCode());
-     * }
-     */
+    @Override
+    public int volumeAvailable() {
+
+        int totalVolume = calculateVolume();
+        int usedVolume = 0;
+        for (IProduct product : products) {
+            usedVolume += product.getVolume();
+        }
+        return totalVolume - usedVolume;
+    }
+
     @Override
     public String toString() {
-
         String message = """
                 %s ref. %s
                 Hash: %s

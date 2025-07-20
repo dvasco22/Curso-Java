@@ -28,7 +28,7 @@ public class Fibonacci {
 
             if (fib > lastTerm) {
                 leave = true;
-                System.out.printf(" [ %d Terninos antes de %d ]", cont, lastTerm);
+                System.out.printf(" [ %d Términos antes de %d ]", cont, lastTerm);
             } else {
                 System.out.printf(",%d", fib);
                 cont++;
