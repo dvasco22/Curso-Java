@@ -8,6 +8,90 @@ git commit -m "Mi nuevo cambio"
 git push origin master
 git pull origin master
 
+-----------------------------------------------------------------------------------
+git pull origin master --rebase  // (Si tu rama es main, cambia master por main)
+git add .
+git commit -m "adding etc, etc mm/dd/yyyy @ hh:mm-cet"
+git push origin master
+git branch --set-upstream-to=origin/master // Para no hacer siempre origin master
+
+git pull --rebase
+git push
+
+
+resumengit pull --rebase      # Siempre antes de trabajar
+git add .              # Añadir cambios
+git commit -m "..."    # Guardar con mensaje
+git push               # Subir a GitHub
+-----------------------------------------------------------------------------------
+
+MAVEN Project
+
+https://maven.apache.org/download.cgi
+download -> Binary zip archive	apache-maven-3.9.10-bin.zip
+
+PS C:\Users\Claudia\Desktop\Git-VS-Projects> mvn -version
+Apache Maven 3.9.10 (5f519b97e944483d878815739f519b2eade0a91d)
+Maven home: C:\Apache\Maven\apache-maven-3.9.10
+Java version: 24.0.1, vendor: Oracle Corporation, runtime: C:\Program Files\Java\jdk-24
+Default locale: es_ES, platform encoding: UTF-8
+OS name: "windows 11", version: "10.0", arch: "amd64", family: "windows"
+PS C:\Users\Claudia\Desktop\Git-VS-Projects> 
+
+
+ Executing task: "mvn org.apache.maven.plugins:maven-archetype-plugin:3.1.2:generate -DarchetypeArtifactId="archetype-quickstart-jdk8" -DarchetypeGroupId="com.github.ngeor" -DarchetypeVersion="2.8.1" -DgroupId="com.cdsb" -DartifactId="demos-persis"" 
+
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::staticFieldBase has been called by com.google.inject.internal.aop.HiddenClassDefiner (file:/C:/Apache/Maven/apache-maven-3.9.10/lib/guice-5.1.0-classes.jar)
+WARNING: Please consider reporting this to the maintainers of class com.google.inject.internal.aop.HiddenClassDefiner
+WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< org.apache.maven:standalone-pom >-------------------
+[INFO] Building Maven Stub Project (No POM) 1
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO]
+[INFO] >>> archetype:3.1.2:generate (default-cli) > generate-sources @ standalone-pom >>>
+[INFO]
+[INFO] <<< archetype:3.1.2:generate (default-cli) < generate-sources @ standalone-pom <<<
+[INFO]
+[INFO] 
+[INFO] --- archetype:3.1.2:generate (default-cli) @ standalone-pom ---
+[INFO] Generating project in Interactive mode
+[INFO] Archetype repository not defined. Using the one from [com.github.ngeor:archetype-quickstart-jdk8:3.0.2] found in catalog remote
+[INFO] Using property: groupId = com.cdsb
+[INFO] Using property: artifactId = demos-persis
+Define value for property 'version' 1.0-SNAPSHOT: : 1.0.0
+[INFO] Using property: package = com.cdsb
+Confirm properties configuration:
+groupId: com.cdsb
+artifactId: demos-persis
+version: 1.0.0
+package: com.cdsb
+ Y: :
+[INFO] ----------------------------------------------------------------------------
+[INFO] Using following parameters for creating project from Archetype: archetype-quickstart-jdk8:2.8.1
+[INFO] ----------------------------------------------------------------------------
+[INFO] Parameter: groupId, Value: com.cdsb
+[INFO] Parameter: artifactId, Value: demos-persis
+[INFO] Parameter: version, Value: 1.0.0
+[INFO] Parameter: package, Value: com.cdsb
+[INFO] Parameter: packageInPathFormat, Value: com/cdsb
+[INFO] Parameter: package, Value: com.cdsb
+[INFO] Parameter: groupId, Value: com.cdsb
+[INFO] Parameter: artifactId, Value: demos-persis
+[INFO] Parameter: version, Value: 1.0.0
+[INFO] Project created from Archetype in dir: C:\Users\Claudia\Desktop\Git-VS-Projects\java-course\demos-persis
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  10.771 s
+[INFO] Finished at: 2025-07-16T06:49:05+02:00
+[INFO] ------------------------------------------------------------------------
+ *  Terminal will be reused by tasks, press any key to close it. 
+
+-----------------------------------------------------------------------------------
+
 
 python3.10 -m venv tdf-env
 

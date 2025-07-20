@@ -1,0 +1,25 @@
+demo_persists/
+│
+├── pom.xml                            # Archivo de configuración de Maven
+├── README.md                          # (opcional) documentación del proyecto
+│
+├── src/
+│   ├── main/
+│   │   └── java/
+│   │       └── com/
+│   │           └── cdsb/
+│   │               └── App.java       # Clase principal
+│   │
+│   └── test/
+│       └── java/
+│           └── com/
+│               └── cdsb/
+│                   └── AppTest.java  # Clase de prueba unitaria (JUnit)
+│
+├── .vscode/                           # Configuración opcional de VSCode
+│   ├── launch.json                    # Configuración para depurar
+│   ├── tasks.json                     # Tareas personalizadas como "build"
+│   └── settings.json                  # Configuraciones específicas del proyecto
+│
+├── target/                            # Carpeta generada al compilar (con `mvn compile`)
+│   └── ...                            # Clases compiladas y .jar final

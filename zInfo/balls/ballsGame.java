@@ -1,24 +1,23 @@
+
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
 import java.awt.event.*;
 import java.util.Random;
 
 @SuppressWarnings("serial")
-public class ballsGame extends JPanel implements ActionListener, KeyListener, ItemListener {
+public class ballsGame extends JPanel implements ActionListener, KeyListener, ItemListener, MouseListener {
 
   static final int WIDTH=800;
   static final int HEIGHT=600;
   static final int MAX_RADIUS=100;
   static final int MIN_RADIUS=20;
   static final int MAX_BALLS=100;
-  static final int MAX_BALLS_X_GAME=3;
+  static final int MAX_BALLS_X_GAME=4;
   static final int SLEEP=30;
 
   private JButton repaintButton;        
+
+  public int countBalls = MAX_BALLS_X_GAME;
 
   Circle circles[]=new Circle[MAX_BALLS];   //Array of Circles 
 
@@ -41,6 +40,24 @@ public class ballsGame extends JPanel implements ActionListener, KeyListener, It
          repaintButton.addKeyListener(this);
          repaintButton.setVisible(false);
          setSize(WIDTH,HEIGHT); //Panel size
+
+
+        // Manejo de clicks
+        addMouseListener(new MouseAdapter() {
+            @Override
+            public void mousePressed(MouseEvent e) {
+                if (e.getButton() == MouseEvent.BUTTON3) { // Clic derecho
+                    //addBall(e.getX(), e.getY());
+                    addBall(e);
+                    //System.out.println("Se presionó el botón drerecho del mouse.");
+                } else if (e.getButton() == MouseEvent.BUTTON1) { // Clic izquierdo
+                    removeLastBall();
+                    //System.out.println("Se presionó el botón Izquierdo  del mouse.");
+                }
+            }
+        });
+
+
          initGame();
   }
 /*------------------------------------------------------------------------------------------*/
@@ -55,7 +72,7 @@ public class ballsGame extends JPanel implements ActionListener, KeyListener, It
          Random random = new Random();
          int radius; 
 
-         for (int i=0; i<MAX_BALLS_X_GAME; i++) {
+         for (int i=0; i < countBalls /*MAX_BALLS_X_GAME*/; i++) {
 
              circles[i] = new Circle();
 
@@ -92,8 +109,8 @@ public class ballsGame extends JPanel implements ActionListener, KeyListener, It
 /*------------------------------------------------------------------------------------------*/
    /**/
    public void move() {
-         for (int i=0; i<MAX_BALLS_X_GAME; i++) 
-    	       for (int j=0; j<MAX_BALLS_X_GAME; j++) 
+         for (int i=0; i < countBalls /*MAX_BALLS_X_GAME*/; i++) 
+    	       for (int j=0; j < countBalls /*MAX_BALLS_X_GAME*/; j++) 
     	    	   if (i!=j)
                       circles[i].move(WIDTH,HEIGHT,circles[j],i,j);
   }
@@ -108,55 +125,38 @@ public class ballsGame extends JPanel implements ActionListener, KeyListener, It
          g.setColor(Color.BLUE);
          g.fillRect(0,0,WIDTH,HEIGHT);
          
-         for (int i=0; i<MAX_BALLS_X_GAME; i++) 
+         for (int i=0; i < countBalls /*MAX_BALLS_X_GAME*/; i++) 
     	      circles[i].drawCircle(g,i); 
   }
 /*------------------------------------------------------------------------------------------*/  
+   
+    //si se presiona el boton derecho del mouse
+    public void  addBall(MouseEvent e) {
+        if (countBalls >= MAX_BALLS) 
+            return;
 
-  
-  
-        /*            
-        for (int i=0; i<MAX_BALLS_X_GAME; i++) {
-            circles[i].drawCircle(g);
-            circles[i].move(WIDTH,HEIGHT);
+        Random rand = new Random();
+        int radius = rand.nextInt(MAX_RADIUS - MIN_RADIUS) + MIN_RADIUS;
+        Circle newCircle = new Circle(e.getX(), e.getY(), radius);
 
-            for (int j=0; j<MAX_BALLS_X_GAME; j++) 
-                if (j!=i) 
-                   if (circles[i].crash(circles[j])) 
-                       circles[i].moveIfCrash(circles[j]);}
-        }               
-       */
-           /*            
-           int i=0;
-           int j=0;
-           boolean crash;
-           while (i<MAX_BALLS_X_GAME) {
-                  circles[i].move(WIDTH,HEIGHT);
+        for (int i = 0; i < countBalls; i++) {
+            if (newCircle.getCenter().distance(circles[i].getCenter()) < radius + circles[i].getRadius()) {
+                return; // Colisión, no se agrega
+            }
+        }
+        circles[countBalls++] = newCircle;
+    }
 
-            		 j=0;
-                     crash=false;            		 
-            		 while ((j<MAX_BALLS_X_GAME) && (!crash)) {
-            			    if ((!circles[i].crash(circles[j]) || i==j))
-            			       j++;
-            			    else {
-            			    	circles[i].moveIfCrash(circles[j]);
-            			    	crash=true;
-            			    }
-            		 }
-            	  
-            	  if (crash) {
-            		  i=0;
-            	  }    
-            	  else {
-//            	      circles[i].drawCircle(g); 
-                      i++;
-                  }
-           }
 
-           for (int k=0; k<MAX_BALLS_X_GAME; k++) 
-       	        circles[k].drawCircle(g); 
-           */
-  
+
+   //si se presiona el botón Izquierdo del mouse
+   public void removeLastBall() {
+         if (countBalls > 0) {
+            countBalls--;
+            circles[countBalls] = null;
+         }
+    }
+
   
 /*------------------------------------------------------------------------------------------*/
 /* IMPLEMENTS                                                                               */
@@ -176,9 +176,25 @@ public class ballsGame extends JPanel implements ActionListener, KeyListener, It
           }
    }
 
-   public void keyReleased(KeyEvent e) {}
+   /*public void keyReleased(KeyEvent e) {}
    public void keyTyped(KeyEvent e) {}
-   public void itemStateChanged(ItemEvent e) {}
+   public void itemStateChanged(ItemEvent e) {}*/
+
+// Implementación vacía de otros métodos del MouseListener
+    public void mousePressed(MouseEvent e) {}
+    public void mouseReleased(MouseEvent e) {}
+    public void mouseEntered(MouseEvent e) {}
+    public void mouseExited(MouseEvent e) {}
+
+    /*public void actionPerformed(ActionEvent e) {}
+    public void keyPressed(KeyEvent e) {
+        if (e.getKeyCode() == KeyEvent.VK_ENTER) repaint();
+    }*/
+
+    public void keyReleased(KeyEvent e) {}
+    public void keyTyped(KeyEvent e) {}
+    public void itemStateChanged(ItemEvent e) {}
+
 
 /*------------------------------------------------------------------------------------------*/
 /* MAIN                                                                                     */

@@ -1,0 +1,4 @@
+Carne ,11.75
+Manzana,0.5
+Leche,1.5
+Pan,1.0

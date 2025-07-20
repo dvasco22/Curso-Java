@@ -1,0 +1,282 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CatalogoConArchivo",
+            "request": "launch",
+            "mainClass": "local.collections.CatalogoConArchivo",
+            "projectName": "demo_vc"
+        },
+        {
+            "type": "java",
+            "name": "CatalogoInteractivo",
+            "request": "launch",
+            "mainClass": "local.collections.CatalogoInteractivo",
+            "projectName": "demo_vc"
+        },
+        {
+            "type": "java",
+            "name": "CatalogoInteractivo",
+            "request": "launch",
+            "mainClass": "local.collections.catalogo.CatalogoInteractivo",
+            "projectName": "demo_vc"
+        },
+        {
+            "type": "java",
+            "name": "MatrixRandomMultiply",
+            "request": "launch",
+            "mainClass": "MatrixRandomMultiply"
+        },
+        {
+            "type": "java",
+            "name": "SaveUser",
+            "request": "launch",
+            "mainClass": "com.cdsb.files.exercises.SaveUser",
+            "projectName": "demos-persis"
+        },
+        {
+            "type": "java",
+            "name": "FileSystem2",
+            "request": "launch",
+            "mainClass": "com.cdsb.files.FileSystem2",
+            "projectName": "demos-persis"
+        },
+        {
+            "type": "java",
+            "name": "FileSystem1",
+            "request": "launch",
+            "mainClass": "com.cdsb.files.FileSystem1",
+            "projectName": "demos-persis"
+        },
+        {
+            "type": "java",
+            "name": "FileSystem1",
+            "request": "launch",
+            "mainClass": "FileSystem1",
+            "projectName": "demos-concepts"
+        },
+        {
+            "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "com.cdsb.App"
+        },
+        {
+            "type": "java",
+            "name": "CardsApp",
+            "request": "launch",
+            "mainClass": "local.collections.exercises.Ex05_Cards.CardsApp",
+            "projectName": "demo_vc"
+        },
+        {
+            "type": "java",
+            "name": "Demo09Map",
+            "request": "launch",
+            "mainClass": "local.collections.Demo09Map",
+            "projectName": "demo_vc"
+        },
+        {
+            "type": "java",
+            "name": "InverseGaussJordan",
+            "request": "launch",
+            "mainClass": "InverseGaussJordan"
+        },
+        {
+            "type": "java",
+            "name": "HelloWorld",
+            "request": "launch",
+            "mainClass": "HelloWorld"
+        },
+        {
+            "type": "java",
+            "name": "ballsGame",
+            "request": "launch",
+            "mainClass": "ballsGame"
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Demo01Collection",
+            "request": "launch",
+            "mainClass": "local.collections.Demo01Collection",
+            "projectName": "demo_vc"
+        },
+        {
+            "type": "java",
+            "name": "Demo02List",
+            "request": "launch",
+            "mainClass": "local.collections.Demo02List",
+            "projectName": "demo_vc"
+        },
+        {
+            "type": "java",
+            "name": "Demo03List",
+            "request": "launch",
+            "mainClass": "local.collections.Demo03List",
+            "projectName": "demo_vc"
+        },
+        {
+            "type": "java",
+            "name": "Demo04ArrayList",
+            "request": "launch",
+            "mainClass": "local.collections.Demo04ArrayList",
+            "projectName": "demo_vc"
+        },
+        {
+            "type": "java",
+            "name": "Demo05LinkedList",
+            "request": "launch",
+            "mainClass": "local.collections.Demo05LinkedList",
+            "projectName": "demo_vc"
+        },
+        {
+            "type": "java",
+            "name": "Demo06Set",
+            "request": "launch",
+            "mainClass": "local.collections.Demo06Set",
+            "projectName": "demo_vc"
+        },
+        {
+            "type": "java",
+            "name": "Demo07SetPerson",
+            "request": "launch",
+            "mainClass": "local.collections.Demo07SetPerson",
+            "projectName": "demo_vc"
+        },
+        {
+            "type": "java",
+            "name": "Demo08Iterator",
+            "request": "launch",
+            "mainClass": "local.collections.Demo08Iterator",
+            "projectName": "demo_vc"
+        },
+        {
+            "type": "java",
+            "name": "Ex01",
+            "request": "launch",
+            "mainClass": "local.collections.exercises.Ex01",
+            "projectName": "demo_vc"
+        },
+        {
+            "type": "java",
+            "name": "Ex01OOP",
+            "request": "launch",
+            "mainClass": "local.collections.exercises.Ex01OOP",
+            "projectName": "demo_vc"
+        },
+        {
+            "type": "java",
+            "name": "Ex03App",
+            "request": "launch",
+            "mainClass": "local.collections.exercises.Ex03_Employees.Ex03App",
+            "projectName": "demo_vc"
+        },
+        {
+            "type": "java",
+            "name": "ShapesApp",
+            "request": "launch",
+            "mainClass": "local.collections.exercises.Ex04_Shapes.ShapesApp",
+            "projectName": "demo_vc"
+        },
+        {
+            "type": "java",
+            "name": "Exx02Pali",
+            "request": "launch",
+            "mainClass": "local.collections.exercises.Exx02Pali",
+            "projectName": "demo_vc"
+        },
+        {
+            "type": "java",
+            "name": "Calculator",
+            "request": "launch",
+            "mainClass": "local.concept1.Calculator",
+            "projectName": "demo_vc"
+        },
+        {
+            "type": "java",
+            "name": "Concept1",
+            "request": "launch",
+            "mainClass": "local.concept1.Concept1",
+            "projectName": "demo_vc"
+        },
+        {
+            "type": "java",
+            "name": "Factorial",
+            "request": "launch",
+            "mainClass": "local.concept1.Factorial",
+            "projectName": "demo_vc"
+        },
+        {
+            "type": "java",
+            "name": "ShowExceptions",
+            "request": "launch",
+            "mainClass": "local.concept1.ShowExceptions",
+            "projectName": "demo_vc"
+        },
+        {
+            "type": "java",
+            "name": "CalcApp",
+            "request": "launch",
+            "mainClass": "local.concept2_vc.CalcApp",
+            "projectName": "demo_vc"
+        },
+        {
+            "type": "java",
+            "name": "Age",
+            "request": "launch",
+            "mainClass": "local.data.Age",
+            "projectName": "demo_vc"
+        },
+        {
+            "type": "java",
+            "name": "Dates",
+            "request": "launch",
+            "mainClass": "local.data.Dates",
+            "projectName": "demo_vc"
+        },
+        {
+            "type": "java",
+            "name": "Primitives",
+            "request": "launch",
+            "mainClass": "local.data.Primitives",
+            "projectName": "demo_vc"
+        },
+        {
+            "type": "java",
+            "name": "Text",
+            "request": "launch",
+            "mainClass": "local.data.Text",
+            "projectName": "demo_vc"
+        },
+        {
+            "type": "java",
+            "name": "AppArrays",
+            "request": "launch",
+            "mainClass": "local.data.arrays.AppArrays",
+            "projectName": "demo_vc"
+        },
+        {
+            "type": "java",
+            "name": "Generic",
+            "request": "launch",
+            "mainClass": "local.generics.Generic",
+            "projectName": "demo_vc"
+        },
+        {
+            "type": "java",
+            "name": "LambdasApp",
+            "request": "launch",
+            "mainClass": "local.lambdas.LambdasApp",
+            "projectName": "demo_vc"
+        }
+    ]
+}
