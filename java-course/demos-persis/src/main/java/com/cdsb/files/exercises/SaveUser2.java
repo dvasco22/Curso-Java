@@ -3,6 +3,8 @@ package com.cdsb.files.exercises;
 import java.util.List;
 import java.util.Scanner;
 
+import com.cdsb.files.FileSystem2;
+
 
 // Pregúntale al usuario:
 // - Nombre
@@ -11,14 +13,14 @@ import java.util.Scanner;
 // - Guárdalo en un fichero user.txt
 // - Muéstrale al usuario lo que has guardado
 
-public class SaveUser {
+public class SaveUser2 {
 
     private String name;
     private String surname1;
     private String surname2;
     private String pathName;
 
-    public SaveUser(String pathName) {
+    public SaveUser2(String pathName) {
         this.pathName = pathName;
         getUserData();
         System.out.println("-".repeat(50));
@@ -50,8 +52,8 @@ public class SaveUser {
     }
 
     public void saveUserData() {
-        FileSystem.createFile(pathName);
-        String result = FileSystem.writeFile(pathName, makeFullName());
+        FileSystem2.createFile(pathName);
+        String result = FileSystem2.writeFile(pathName, makeFullName());
         System.out.println(result);
     }
 
@@ -64,7 +66,7 @@ public class SaveUser {
     }
 
     public void readUserData() {
-        List<String> read = FileSystem.readFileToList(pathName);
+        List<String> read = FileSystem2.readFileToList(pathName);
         showUserData(read);
     }
 
@@ -97,7 +99,7 @@ public class SaveUser {
     }
 
     public static void main(String[] args) {
-        SaveUser user = new SaveUser("demos-persis/resources/sample.txt");
+        SaveUser2 user = new SaveUser2("demos-persis/resources/sample.txt");
         user.saveUserData();
         user.readUserData();
     }

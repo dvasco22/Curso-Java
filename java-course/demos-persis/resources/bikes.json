@@ -1,0 +1,34 @@
+[
+  {
+    "brand": "Trek",
+    "model": "Domane",
+    "radioWheel": 28,
+    "color": "Red",
+    "gears": 22,
+    "isCustomizable": true
+  },
+  {
+    "brand": "Giant",
+    "model": "Defy",
+    "radioWheel": 30,
+    "color": "Blue",
+    "gears": 18,
+    "isCustomizable": false
+  },
+  {
+    "brand": "Specialized",
+    "model": "Roubaix",
+    "radioWheel": 32,
+    "color": "Black",
+    "gears": 20,
+    "isCustomizable": true
+  },
+    {
+    "brand": "BHS",
+    "model": "Plus",
+    "radioWheel": 30,
+    "color": "Pink",
+    "gears": 10,
+    "isCustomizable": false
+  }
+]

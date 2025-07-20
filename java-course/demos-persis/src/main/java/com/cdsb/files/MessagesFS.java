@@ -1,4 +1,3 @@
-
 package com.cdsb.files;
 
 public enum MessagesFS {
