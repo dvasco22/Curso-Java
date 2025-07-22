@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="8.45.1">
+<file name="C:\Users\hola\java-course\java-course\demos-q\src\main\java\local\App.java">
+</file>
+<file name="C:\Users\hola\java-course\java-course\demos-q\src\main\java\local\connections\EntityManagerProvider.java">
+<error line="1" severity="error" message="El fichero no termina con un retorno de carro." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
+<error line="5" column="8" severity="error" message="import no usado - java.util.List." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+<error line="8" column="1" severity="error" message="Orden incorrecto para el import &apos;io.github.cdimascio.dotenv.Dotenv&apos;." source="com.puppycrawl.tools.checkstyle.checks.imports.ImportOrderCheck"/>
+<error line="8" column="1" severity="error" message="Separación extra en el grupo de importación antes &apos;io.github.cdimascio.dotenv.Dotenv&apos;" source="com.puppycrawl.tools.checkstyle.checks.imports.ImportOrderCheck"/>
+<error line="13" column="1" severity="error" message="Clases de servicios públicos no deben tener un constructor público o por defecto." source="com.puppycrawl.tools.checkstyle.checks.design.HideUtilityClassConstructorCheck"/>
+<error line="13" column="1" severity="error" message="Falta el comentario Javadoc." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocTypeCheck"/>
+<error line="15" column="6" severity="error" message="member def modifier en el nivel de sangrado 5 no está al nivel correcto, 4" source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="15" column="20" severity="error" message="Modificador &apos;static&apos; desordenado según las sugerencias de la JLS." source="com.puppycrawl.tools.checkstyle.checks.modifier.ModifierOrderCheck"/>
+<error line="15" column="50" severity="error" message="&apos;=&apos; no está precedido de espacio en blanco." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="16" column="6" severity="error" message="member def modifier en el nivel de sangrado 5 no está al nivel correcto, 4" source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="18" column="6" severity="error" message="Falta el comentario Javadoc." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocMethodCheck"/>
+<error line="18" column="6" severity="error" message="method def modifier en el nivel de sangrado 5 no está al nivel correcto, 4" source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="19" column="14" severity="error" message="method def el descendiente en el nivel de sangrado 13 no está al nivel correcto, 8" source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="20" column="14" severity="error" message="method def el descendiente en el nivel de sangrado 13 no está al nivel correcto, 8" source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="21" column="14" severity="error" message="method def el descendiente en el nivel de sangrado 13 no está al nivel correcto, 8" source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="22" column="14" severity="error" message="method def el descendiente en el nivel de sangrado 13 no está al nivel correcto, 8" source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="23" column="14" severity="error" message="method def el descendiente en el nivel de sangrado 13 no está al nivel correcto, 8" source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="24" column="14" severity="error" message="method def el descendiente en el nivel de sangrado 13 no está al nivel correcto, 8" source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="25" column="6" severity="error" message="method def rcurly en el nivel de sangrado 5 no está al nivel correcto, 4" source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="38" column="5" severity="error" message="&apos;METHOD_DEF&apos; cuenta con más de 1 líneas vacías antes." source="com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"/>
+</file>
+<file name="C:\Users\hola\java-course\java-course\demos-q\src\test\java\local\AppTest.java">
+</file>
+</checkstyle>

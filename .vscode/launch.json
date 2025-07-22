@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "EntityManagerProvider",
+            "request": "launch",
+            "mainClass": "local.connections.EntityManagerProvider",
+            "projectName": "demos-q"
+        },
+        {
+            "type": "java",
             "name": "CatalogoConArchivo",
             "request": "launch",
             "mainClass": "local.collections.CatalogoConArchivo",
