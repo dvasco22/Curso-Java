@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "local.App",
+            "projectName": "demos-q"
+        },
+        {
+            "type": "java",
             "name": "EntityManagerProvider",
             "request": "launch",
             "mainClass": "local.connections.EntityManagerProvider",
