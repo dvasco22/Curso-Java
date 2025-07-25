@@ -1,3 +1,5 @@
+
+
 package local.repositories;
 
 import java.util.List;
@@ -47,7 +49,7 @@ public abstract class AbstractDAO<E> implements DAO<E> {
         entityManager.getTransaction().begin();
         entityManager.persist(entity);
         entityManager.getTransaction().commit();
-        return entity;
+        return entity; // Return the saved entity
     }
 
     @Override
@@ -63,5 +65,9 @@ public abstract class AbstractDAO<E> implements DAO<E> {
         entityManager.getTransaction().begin();
         entityManager.remove(entity);
         entityManager.getTransaction().commit();
+    }
+
+    public void detach(E entity) {
+        entityManager.detach(entity);
     }
 }

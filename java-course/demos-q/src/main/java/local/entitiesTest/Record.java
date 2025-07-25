@@ -1,4 +1,4 @@
-package local.entities;
+package local.entitiesTest;
 
 import java.util.UUID;
 
@@ -7,8 +7,6 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 
 @Entity
@@ -17,13 +15,8 @@ public class Record {
     @Column(name = "record_id")
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
-    private UUID id;
-    private String content;
-
-    @OneToOne
-    @JoinColumn(name="meeting_id", unique = true)
-    private Meeting meeting;
-
+    UUID id;
+    String content;
 
     public Record(String content) {
         this.content = content;
@@ -33,17 +26,10 @@ public class Record {
         // JPA default constructor
     }
 
-    public void setContent(String content) {
-        this.content = content;
-    }
-
     @Override
     public String toString() {
-        return "Record [id=" + id + ", content=" + content + ", meeting=" + meeting + "]";
+        return "Record [id=" + id + ", content=" + content + "]";
     }
-
-
-
 
 
 }

@@ -3,14 +3,14 @@ package local;
 
 import java.time.LocalDateTime;
 
-import local.entities.Meeting;
-import local.repositories.MeetingDAO;;
+import local.entitiesTest.Meeting;
+import local.repositories.MeetingDAOTest;
 
 /**
  * Hello world!
  */
-public final class App {
-    private App() {
+public final class AppTest {
+    private AppTest() {
 
     }
 
@@ -21,7 +21,7 @@ public final class App {
      */
     public static void main(String[] args) {
         System.out.println("Hello World!");
-        MeetingDAO meetingDAO = new MeetingDAO();
+        MeetingDAOTest meetingDAO = new MeetingDAOTest();
 
         meetingDAO.save(new Meeting(
                 "Primera reunion", LocalDateTime.now().plusDays(2)));

@@ -6,6 +6,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "AppMeetings",
+            "request": "launch",
+            "mainClass": "local.AppMeetings",
+            "projectName": "demos-q"
+        },
+        {
+            "type": "java",
+            "name": "AppTest",
+            "request": "launch",
+            "mainClass": "local.AppTest",
+            "projectName": "demos-q"
+        },
+        {
+            "type": "java",
+            "name": "initialTestApp",
+            "request": "launch",
+            "mainClass": "local.initialTestApp",
+            "projectName": "demos-q"
+        },
+        {
+            "type": "java",
+            "name": "EntityManagerProviderOK",
+            "request": "launch",
+            "mainClass": "local.connections.EntityManagerProviderOK",
+            "projectName": "demos-q"
+        },
+        {
+            "type": "java",
             "name": "App",
             "request": "launch",
             "mainClass": "local.App",
