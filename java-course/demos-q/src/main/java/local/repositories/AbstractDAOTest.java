@@ -6,17 +6,17 @@ import java.util.Optional;
 import jakarta.persistence.EntityManager;
 import local.connections.EntityManagerProvider;
 
-public abstract class AbstractDAO<E> implements DAO<E> {
+public abstract class AbstractDAOTest<E> implements DAO<E> {
 
     EntityManager entityManager;
     Class<E> entityClass;
 
-    public AbstractDAO(Class<E> entityClass) {
+    public AbstractDAOTest(Class<E> entityClass) {
         entityManager = EntityManagerProvider.getEntityManager();
         this.entityClass = entityClass;
     }
 
-    public AbstractDAO(
+    public AbstractDAOTest(
             Class<E> entityClass,
             EntityManager entityManager) {
         this.entityManager = entityManager;
@@ -64,8 +64,9 @@ public abstract class AbstractDAO<E> implements DAO<E> {
         entityManager.remove(entity);
         entityManager.getTransaction().commit();
     }
-
+/*
     public void detach(E entity) {
         entityManager.detach(entity);
     }
+*/
 }

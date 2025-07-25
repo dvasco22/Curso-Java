@@ -1,10 +1,9 @@
 package local;
 
-import local.repositories.RecordDAO;
-
 import java.util.UUID;
 
 import local.entities.Record;
+import local.repositories.RecordDAO;
 
 public class AppRecords {
 
@@ -32,10 +31,8 @@ public class AppRecords {
         try {
             Record p3 = dao.findById(UUID.fromString("6436ae06-b147-4e88-89b7-e87ed6cfc9b3")).orElseThrow(() -> new RuntimeException("Record no encontrado"));
             
-            ////////////////////
             dao.detach(p3);
-            // TODO implement detach() 
-
+           
             System.out.println("----------- Update by ID 2 -----------");
             p3.setContent("Info Actualizada de la reunión");
             dao.update(p3);

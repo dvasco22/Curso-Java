@@ -29,9 +29,8 @@ public class AppPersons {
         try {
             Person p3 = dao.findById(4).orElseThrow(() -> new RuntimeException("Persona no encontrada"));
 
-            ///////////////////
             dao.detach(p3);
-            // TODO implement detach()
+            
             System.out.println("----------- Update by ID 2 -----------");
             p3.setEmail("new@sample.com");
             dao.update(p3);
