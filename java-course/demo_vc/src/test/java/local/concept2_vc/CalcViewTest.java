@@ -25,7 +25,7 @@ public class CalcViewTest {
     public void setUp() {
 
         ctrlMock = Mockito.mock(CalcController.class);
-        ;
+        
         view = new CalcView(ctrlMock);
 
         // Guardar el input original

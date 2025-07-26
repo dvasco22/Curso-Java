@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "AppRooms",
+            "request": "launch",
+            "mainClass": "local.AppRooms",
+            "projectName": "demos-q"
+        },
+        {
+            "type": "java",
             "name": "AppMeetings",
             "request": "launch",
             "mainClass": "local.AppMeetings",

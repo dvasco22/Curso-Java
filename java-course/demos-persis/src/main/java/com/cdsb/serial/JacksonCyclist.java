@@ -35,6 +35,7 @@ public class JacksonCyclist {
         System.out.println(cyclist);
     }
 
+    @SuppressWarnings("unused")
     private void saveCyclist() throws JsonProcessingException {
         System.out.println("Saving cyclist...");
         String cyJSON = mapper.writeValueAsString(cyclist);
