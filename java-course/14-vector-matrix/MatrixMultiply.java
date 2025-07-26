@@ -2,23 +2,23 @@ public class MatrixMultiply {
 
     public static int[][] multiplyMatrices(int[][] A, int[][] B) {
         int rowsA = A.length;
-        int ColsA = A[0].length;
-        int BRows = B.length;
-        int BColumns = B[0].length;
+        int colsA = A[0].length;
+        int rowsB = B.length;
+        int colsB = B[0].length;
 
         // Crear matriz resultado
-        int[][] C = new int[ARows][BColumns];
+        int[][] C = new int[rowsA][colsB];
 
         // Verificar si se pueden multiplicar
-        if (AColumns != BRows) {
+        if (colsA != rowsB) {
             System.out.println("No se pueden multiplicar: columnas de A diferente a filas de B.");
         } else {
             // Algoritmo de multiplicación
-            for (int i = 0; i < ARows; i++) {
-                for (int j = 0; j < BColumns; j++) {
+            for (int i = 0; i < rowsA; i++) {
+                for (int j = 0; j < colsB; j++) {
                     C[i][j] = 0;
-                    for (int k = 0; k < AColumns; k++) {
-                        C[i][j] += A[i][k] * B[k][j];
+                    for (int k = 0; k < colsA; k++) {
+                        C[i][j] += A[i][k] * B[k][j];  
                     }
                 }
             }

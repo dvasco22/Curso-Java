@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "MultiplicacionMatrices",
+            "request": "launch",
+            "mainClass": "MultiplicacionMatrices",
+            "projectName": "java-course_4affc752"
+        },
+        {
+            "type": "java",
+            "name": "MatrixMultiply",
+            "request": "launch",
+            "mainClass": "MatrixMultiply",
+            "projectName": "java-course_4affc752"
+        },
+        {
+            "type": "java",
             "name": "AppRooms",
             "request": "launch",
             "mainClass": "local.AppRooms",

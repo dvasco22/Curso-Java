@@ -1,10 +1,24 @@
 
-import javax.swing.*;
-import java.awt.*;
-import java.awt.event.*;
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.util.Random;
 
-public class ballsGame extends JPanel implements ActionListener, KeyListener, ItemListener, MouseListener {
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public final class ballsGame extends JPanel implements ActionListener, KeyListener, ItemListener, MouseListener {
 
   static final int WIDTH=800;
   static final int HEIGHT=600;
@@ -14,7 +28,15 @@ public class ballsGame extends JPanel implements ActionListener, KeyListener, It
   static final int MAX_BALLS_X_GAME=4;
   static final int SLEEP=30;
 
-  private JButton repaintButton;        
+    public static int getWIDTH() {
+        return WIDTH;
+    }
+
+    public static int getHEIGHT() {
+        return HEIGHT;
+    }
+
+  private final JButton repaintButton;        
 
   public int countBalls = MAX_BALLS_X_GAME;
 
@@ -67,14 +89,14 @@ public class ballsGame extends JPanel implements ActionListener, KeyListener, It
          initGame();
   }
 /*------------------------------------------------------------------------------------------*/
-
+  
   public void initGame() {
-         int width  = getWidth();
-         int height = getHeight();    
-         int XCenter = width/2;
-         int YCenter = height/2;
+         /*int width  = getWidth();*/
+         /*int height = getHeight();*/    
+         int XCenter /* = width/2*/;
+         int YCenter /* = height/2*/;
 
-         boolean leave=true;
+         boolean leave /*=true*/;
          Random random = new Random();
          int radius; 
 
@@ -166,18 +188,17 @@ public class ballsGame extends JPanel implements ActionListener, KeyListener, It
 /*------------------------------------------------------------------------------------------*/
 /* IMPLEMENTS                                                                               */
 /*------------------------------------------------------------------------------------------*/
-  
+  @Override
    public void actionPerformed(ActionEvent e) {
           if (e.getSource()==repaintButton) {
              repaint();
           }
    }   
-        
+ 
+   @Override
    public void keyPressed(KeyEvent e) {
           switch(e.getKeyCode()) {
-          case KeyEvent.VK_ENTER: 
-               repaint();
-               break;
+          case KeyEvent.VK_ENTER -> repaint();
           }
    }
 
@@ -186,10 +207,15 @@ public class ballsGame extends JPanel implements ActionListener, KeyListener, It
    public void itemStateChanged(ItemEvent e) {}*/
 
 // Implementación vacía de otros métodos del MouseListener
+    @Override
     public void mouseClicked(MouseEvent e) {}
+    @Override
     public void mousePressed(MouseEvent e) {}
+    @Override
     public void mouseReleased(MouseEvent e) {}
+    @Override
     public void mouseEntered(MouseEvent e) {}
+    @Override
     public void mouseExited(MouseEvent e) {}
 
     /*public void actionPerformed(ActionEvent e) {}
@@ -197,8 +223,11 @@ public class ballsGame extends JPanel implements ActionListener, KeyListener, It
         if (e.getKeyCode() == KeyEvent.VK_ENTER) repaint();
     }*/
 
+    @Override
     public void keyReleased(KeyEvent e) {}
+    @Override
     public void keyTyped(KeyEvent e) {}
+    @Override
     public void itemStateChanged(ItemEvent e) {}
 
 

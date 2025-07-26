@@ -63,7 +63,7 @@ C[][] = | C[1][1] C[1][2] |                             A.B -> C = | 58   64 |
             }
 
 
-Nota : Para la división no existe la operación  A/B, se debe obtenr la matriz inversa B^-1 y multiplicar por A
+Nota : Para la división no existe la operación  A/B, se debe obtener la matriz inversa B^-1 y multiplicar por A
 
        B x B^-1 = I (identica ) Matriz con al diagonal en 1 y el resto de la posiciones iguales a 0;
 
