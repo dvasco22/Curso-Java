@@ -1,12 +1,13 @@
 package local.concept_test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 import java.util.Scanner;
 
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
 
 public class InputTest {

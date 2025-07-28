@@ -1,4 +1,3 @@
-
 package local.concept2_vc;
 
 import java.text.NumberFormat;

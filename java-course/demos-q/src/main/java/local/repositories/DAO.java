@@ -1,5 +1,3 @@
-
-
 package local.repositories;
 
 import java.util.List;
@@ -11,5 +9,5 @@ public interface DAO<E> {
     E save(E entity);
     void update(E entity);
     void delete(E entity);
-    // <ID> void delete(ID id);
+    // <ID> void deleteById(ID id);
 }

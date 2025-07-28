@@ -1,10 +1,9 @@
 
 package local.collections.exercises.Ex06_Phone_Map;
 
-import java.util.Collections;
+//import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
-import java.util.Optional;
 import java.util.Set;
 
 // Definida una clase Empleado con 

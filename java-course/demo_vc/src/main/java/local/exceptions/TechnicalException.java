@@ -1,9 +1,8 @@
-
 package local.exceptions;
 
 // RunTime Exception
 
-public class TechnicalException extends RuntimeException {
+public class TechnicalException extends RuntimeException{
 
     public TechnicalException(String message) {
         super(message);
@@ -12,5 +11,6 @@ public class TechnicalException extends RuntimeException {
     public TechnicalException(String message, Throwable cause) {
         super(message, cause);
     }
+
 
 }

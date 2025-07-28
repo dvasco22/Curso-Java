@@ -1,4 +1,3 @@
-
 package local.concept2_vc;
 
 import local.exceptions.BusinessException;
@@ -70,6 +69,13 @@ public class CalcController extends Calc {
         return calculateFactorial((short) num1);
     }
 
+    public long calculateFactorial(byte i) throws BusinessException {
+        if (i == 1) {
+            return calculateFactorial((short) num1);
+        }
+        return calculateFactorial((short) num2);
+    }
+
     public long calculateFactorial(short number) throws BusinessException {
 
         final int MAX_SAFE_FACTORIAL_VALUE = 20;
@@ -95,4 +101,24 @@ public class CalcController extends Calc {
         return result;
     }
 
+    public int pow() throws BusinessException {
+        return pow(num1, num2);
+    }
+
+    public int pow(int num1, int num2) throws BusinessException {
+
+            if (num2 < 0) {
+            String message = "No se pueden calcular potencias de " + num2;
+            // throw new TechnicalException(message);
+            throw new BusinessException(ErrorCodes.ERROR_NEGATIVE, message);
+        }
+
+        int result = 1;
+        for (int i = 1; i <= num2; i++) {
+            result *= num1;
+        }
+        return result;
+    }
+
+   
 }

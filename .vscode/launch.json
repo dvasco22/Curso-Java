@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "PhoneSetApp",
+            "request": "launch",
+            "mainClass": "local.collections.exercises.Ex06_Phone_Map.PhoneSetApp",
+            "projectName": "demo_vc"
+        },
+        {
+            "type": "java",
             "name": "MultiplicacionMatrices",
             "request": "launch",
             "mainClass": "MultiplicacionMatrices",

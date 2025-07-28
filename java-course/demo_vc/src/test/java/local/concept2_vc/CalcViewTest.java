@@ -1,14 +1,19 @@
 package local.concept2_vc;
 
 import java.io.ByteArrayInputStream;
+// import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
 import java.io.PrintStream;
 import java.util.NoSuchElementException;
 
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
+
+import local.exceptions.BusinessException;
+import local.exceptions.ErrorCodes;
 
 // import java.util.NoSuchElementException;
 // import org.mockito.Mockito;
@@ -25,7 +30,7 @@ public class CalcViewTest {
     public void setUp() {
 
         ctrlMock = Mockito.mock(CalcController.class);
-        
+        ;
         view = new CalcView(ctrlMock);
 
         // Guardar el input original
@@ -212,5 +217,4 @@ public class CalcViewTest {
         // Restablecer el output
         System.setOut(originalOut);
     }
-
 }

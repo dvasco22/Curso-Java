@@ -28,15 +28,7 @@ public final class ballsGame extends JPanel implements ActionListener, KeyListen
   static final int MAX_BALLS_X_GAME=4;
   static final int SLEEP=30;
 
-    public static int getWIDTH() {
-        return WIDTH;
-    }
-
-    public static int getHEIGHT() {
-        return HEIGHT;
-    }
-
-  private final JButton repaintButton;        
+   private final JButton repaintButton;        
 
   public int countBalls = MAX_BALLS_X_GAME;
 
@@ -68,9 +60,11 @@ public final class ballsGame extends JPanel implements ActionListener, KeyListen
             @Override
             public void mousePressed(MouseEvent e) {
                 if (e.getButton() == MouseEvent.BUTTON3) { // Clic derecho
-                    removeLastBall();
-                } else if (e.getButton() == MouseEvent.BUTTON1) { // Clic izquierdo
+                    //removeLastBall();
                     addBall(e);
+                } else if (e.getButton() == MouseEvent.BUTTON1) { // Clic izquierdo
+                    //addBall(e);
+                    removeLastBall();
                 }
             }
         });//clase Anónima
@@ -93,8 +87,8 @@ public final class ballsGame extends JPanel implements ActionListener, KeyListen
   public void initGame() {
          /*int width  = getWidth();*/
          /*int height = getHeight();*/    
-         int XCenter /* = width/2*/;
-         int YCenter /* = height/2*/;
+         int xCenter /* = width/2*/;
+         int yCenter /* = height/2*/;
 
          boolean leave /*=true*/;
          Random random = new Random();
@@ -109,19 +103,19 @@ public final class ballsGame extends JPanel implements ActionListener, KeyListen
                  radius=MIN_RADIUS+radius;
 
              do {
-                 XCenter=random.nextInt(WIDTH);
-                 YCenter=random.nextInt(HEIGHT);
+                 xCenter=random.nextInt(WIDTH);
+                 yCenter=random.nextInt(HEIGHT);
  
-                 if (XCenter+radius > WIDTH) 
-                     XCenter-=radius;
-                 if (YCenter+radius > HEIGHT)
-                     YCenter-=radius;
-                 if (XCenter-radius <= 0) 
-                     XCenter+=radius;
-                 if (YCenter-radius <= 0)
-                     YCenter+=radius;
+                 if (xCenter+radius > WIDTH) 
+                     xCenter-=radius;
+                 if (yCenter+radius > HEIGHT)
+                     yCenter-=radius;
+                 if (xCenter-radius <= 0) 
+                     xCenter+=radius;
+                 if (yCenter-radius <= 0)
+                     yCenter+=radius;
 
-                 circles[i].setCircle(XCenter,YCenter,radius);
+                 circles[i].setCircle(xCenter,yCenter,radius);
 
                  int j=i-1;
                  leave=false;
@@ -158,25 +152,24 @@ public final class ballsGame extends JPanel implements ActionListener, KeyListen
   }
 /*------------------------------------------------------------------------------------------*/  
    
-    //si se presiona el boton derecho del mouse
+    //Wheter mouse right button is pressed
     public void  addBall(MouseEvent e) {
         if (countBalls >= MAX_BALLS) 
             return;
 
-        Random rand = new Random();
-        int radius = rand.nextInt(MAX_RADIUS - MIN_RADIUS) + MIN_RADIUS;
+        Random random = new Random();
+        int radius = random.nextInt(MAX_RADIUS - MIN_RADIUS) + MIN_RADIUS;
         Circle newCircle = new Circle(e.getX(), e.getY(), radius);
 
         for (int i = 0; i < countBalls; i++) {
-            if (newCircle.getCenter().distance(circles[i].getCenter()) < radius + circles[i].getRadius()) {
-                //cambiar por crash
-                return; // Colisión, no se agrega
+            if (newCircle.crash(circles[i])) {
+               return; // Colisión, is not added
             }
         }
         circles[countBalls++] = newCircle;
     }
 
-   //si se presiona el botón Izquierdo del mouse
+   //if mouse left button is pressed
    public void removeLastBall() {
          if (countBalls > 0) {
             countBalls--;
@@ -206,7 +199,7 @@ public final class ballsGame extends JPanel implements ActionListener, KeyListen
    public void keyTyped(KeyEvent e) {}
    public void itemStateChanged(ItemEvent e) {}*/
 
-// Implementación vacía de otros métodos del MouseListener
+// Empty Implementation of thr others method from MouseListener
     @Override
     public void mouseClicked(MouseEvent e) {}
     @Override

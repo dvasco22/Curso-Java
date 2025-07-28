@@ -1,4 +1,6 @@
 package local.entities;
+
+import java.util.HashSet;
 import java.util.Set;
 
 import jakarta.persistence.CascadeType;
@@ -10,8 +12,8 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="rooms")
-public class Room {
+@Table(name = "rooms")
+public class Room implements IEntities {
     @Column(name = "room_id")
     @Id
     private String id;
@@ -19,25 +21,40 @@ public class Room {
     private String name;
     private int capacity;
 
-    @OneToMany(mappedBy = "room",
-        cascade = CascadeType.ALL,
-        fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "room", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private Set<Meeting> meetings;
 
     public Room() {
-       // JPA default constructor
+        // JPA default constructor
+        meetings = new HashSet<>();
     }
 
     public Room(String id, String name, int capacity) {
+        this();
         this.id = id;
         this.name = name;
         this.capacity = capacity;
     }
 
-    @Override
-    public String toString() {
-        return "Room [id=" + id + ", name=" + name + ", capacity=" + capacity + ", meetings=" + meetings + "]";
+    public void addMeeting(Meeting meeting) {
+        meetings.add(meeting);
     }
 
+
+    @Override
+    public String toString() {
+        return toString(false);
+    }
+
+    public String toString(boolean includeRelations) {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Room {id:").append(id).append(", name:").append(name).append(", capacity:").append(capacity);
+
+        if (includeRelations && meetings != null) {
+            sb.append(", meetings:").append(meetings);
+        }
+        sb.append("}");
+        return sb.toString();
+    }
 
 }

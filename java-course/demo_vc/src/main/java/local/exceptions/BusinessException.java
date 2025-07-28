@@ -1,4 +1,3 @@
-
 package local.exceptions;
 
 // Checked Exception
@@ -8,7 +7,7 @@ public class BusinessException extends Exception {
     private static String generateMessage(ErrorCodes code, String message) {
         return code + " - " + message;
     }
-
+    
     ErrorCodes code;
 
     public BusinessException(ErrorCodes code, String message) {
@@ -21,3 +20,7 @@ public class BusinessException extends Exception {
         this.code = code;
     }
 }
+
+
+
+

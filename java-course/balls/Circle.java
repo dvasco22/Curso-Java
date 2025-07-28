@@ -1,6 +1,6 @@
-import java.awt.Graphics;
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.Graphics;
 
 /*------------------------------------------------------------------------------------------*/
 public class Circle {
@@ -112,11 +112,11 @@ public class Circle {
    }
 /*****************************/
 
-   /*
+   @Override
    public String toString() {
       return "center=" + center + " radius=" + radius;
    }
-   */
+   
    public double getArea() {
       return Math.PI * radius * radius;
    }
@@ -131,14 +131,12 @@ public class Circle {
    }
 
    public boolean crash(Circle circle) {
-      if ((this.distancePP(circle) - this.radius - circle.radius) <=0)
-         return true;
-      else
-         return false;
+       return (this.distancePP(circle) - this.radius - circle.radius) <=0;
    }
 
    public void drawCircle(Graphics g, int i) {
-          g.setColor(Color.YELLOW);
+          g.setColor(Color.YELLOW);  
+          // TODO to set color at random
           g.drawOval(center.getX()-radius,center.getY()-radius,2*radius,2*radius);
           g.setFont( new Font("Serif", Font.BOLD,15) );
           g.drawString("C"+i,getCenterX()-10,getCenterY());
