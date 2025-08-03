@@ -1,9 +1,11 @@
+C:\Users\hola\java-course\java-course\demos-q\src\main\java\local\AppFinal.java
 C:\Users\hola\java-course\java-course\demos-q\src\main\java\local\AppMeetings.java
 C:\Users\hola\java-course\java-course\demos-q\src\main\java\local\AppPersons.java
 C:\Users\hola\java-course\java-course\demos-q\src\main\java\local\AppRecords.java
 C:\Users\hola\java-course\java-course\demos-q\src\main\java\local\AppRooms.java
 C:\Users\hola\java-course\java-course\demos-q\src\main\java\local\AppTest.java
 C:\Users\hola\java-course\java-course\demos-q\src\main\java\local\connections\EntityManagerProvider.java
+C:\Users\hola\java-course\java-course\demos-q\src\main\java\local\entities\IEntities.java
 C:\Users\hola\java-course\java-course\demos-q\src\main\java\local\entities\Meeting.java
 C:\Users\hola\java-course\java-course\demos-q\src\main\java\local\entities\Person.java
 C:\Users\hola\java-course\java-course\demos-q\src\main\java\local\entities\Record.java
@@ -13,6 +15,7 @@ C:\Users\hola\java-course\java-course\demos-q\src\main\java\local\entitiesTest\P
 C:\Users\hola\java-course\java-course\demos-q\src\main\java\local\entitiesTest\Record.java
 C:\Users\hola\java-course\java-course\demos-q\src\main\java\local\entitiesTest\Room.java
 C:\Users\hola\java-course\java-course\demos-q\src\main\java\local\repositories\AbstractDAO.java
+C:\Users\hola\java-course\java-course\demos-q\src\main\java\local\repositories\AbstractDAOTest.java
 C:\Users\hola\java-course\java-course\demos-q\src\main\java\local\repositories\DAO.java
 C:\Users\hola\java-course\java-course\demos-q\src\main\java\local\repositories\MeetingDAO.java
 C:\Users\hola\java-course\java-course\demos-q\src\main\java\local\repositories\MeetingDAOTest.java

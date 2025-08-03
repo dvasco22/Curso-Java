@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "AppRecords",
+            "request": "launch",
+            "mainClass": "local.AppRecords",
+            "projectName": "demos-q"
+        },
+        {
+            "type": "java",
+            "name": "AppPersons",
+            "request": "launch",
+            "mainClass": "local.AppPersons",
+            "projectName": "demos-q"
+        },
+        {
+            "type": "java",
+            "name": "AppFinal",
+            "request": "launch",
+            "mainClass": "local.AppFinal",
+            "projectName": "demos-q"
+        },
+        {
+            "type": "java",
             "name": "PhoneSetApp",
             "request": "launch",
             "mainClass": "local.collections.exercises.Ex06_Phone_Map.PhoneSetApp",
